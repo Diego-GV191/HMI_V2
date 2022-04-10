@@ -37,10 +37,20 @@ namespace HMI_V2
             }
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        private void MoverVentana()
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void BarraHerramientas_MouseDown(object sender, MouseEventArgs e)
+        {
+            MoverVentana();
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            MoverVentana();
         }
 
         private void btnCerrarPrograma_Click(object sender, EventArgs e)

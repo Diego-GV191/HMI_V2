@@ -1,6 +1,4 @@
-﻿using HMI_V2.Componentes;
-using HMI_V2.Formularios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HMI_V2
+namespace HMI_V2.Formularios
 {
-    public partial class Form1 : Form
+    public partial class Config : Form
     {
-        public Form1()
+        public Config()
         {
             InitializeComponent();
-            Buttons.NavVarDesignButton(ref btnCerrarPrograma, "Right");
-            Buttons.NavVarDesignButton(ref btnMinimizar, "Right");
-            //Buttons.FormDesingButton(ref btnPicConfig);
         }
 
         // Drag form
@@ -45,22 +40,7 @@ namespace HMI_V2
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private bool FormIsOpen(String NameForm)
-        {
-            Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == NameForm).SingleOrDefault<Form>();
-
-            if (existe != null)
-            {
-                MessageBox.Show(NameForm + " esta abierto");
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private void label1_MouseDown(object sender, MouseEventArgs e)
+        private void Config_MouseDown(object sender, MouseEventArgs e)
         {
             MoverVentana();
         }
@@ -70,14 +50,9 @@ namespace HMI_V2
             MoverVentana();
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-            MoverVentana();
-        }
-
         private void btnCerrarPrograma_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -90,15 +65,6 @@ namespace HMI_V2
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-        private void btnConfig_Click(object sender, EventArgs e)
-        {
-            if (!FormIsOpen("Config"))
-            {
-                Config Fconfig = new Config();
-                Fconfig.Show();
             }
         }
     }

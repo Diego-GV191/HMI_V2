@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BarraHerramientas = new System.Windows.Forms.Panel();
+            this.btnConfigVar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrarPrograma = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelInicio = new System.Windows.Forms.Panel();
+            this.btnConfig = new HMI_V2.Controles.EllipseButton();
             this.ControlConfiguracion = new HMI_V2.Controles.EllipseControls();
             this.ellipseControls6 = new HMI_V2.Controles.EllipseControls();
             this.ellipseControls7 = new HMI_V2.Controles.EllipseControls();
@@ -44,16 +48,19 @@
             this.ellipseControls1 = new HMI_V2.Controles.EllipseControls();
             this.PanelOpciones = new HMI_V2.Controles.EllipseControls();
             this.ellipseComponents1 = new HMI_V2.Componentes.EllipseComponents();
-            this.btnConfig = new HMI_V2.Controles.EllipseButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort3 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort4 = new System.IO.Ports.SerialPort(this.components);
             this.BarraHerramientas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelInicio.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraHerramientas
             // 
             this.BarraHerramientas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.BarraHerramientas.Controls.Add(this.btnConfigVar);
             this.BarraHerramientas.Controls.Add(this.label1);
             this.BarraHerramientas.Controls.Add(this.pictureBox1);
             this.BarraHerramientas.Controls.Add(this.btnMinimizar);
@@ -64,6 +71,31 @@
             this.BarraHerramientas.Size = new System.Drawing.Size(800, 40);
             this.BarraHerramientas.TabIndex = 0;
             this.BarraHerramientas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            // 
+            // btnConfigVar
+            // 
+            this.btnConfigVar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnConfigVar.FlatAppearance.BorderSize = 0;
+            this.btnConfigVar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfigVar.Image = global::HMI_V2.Properties.Resources.ajustes_de_engranajes;
+            this.btnConfigVar.Location = new System.Drawing.Point(680, 0);
+            this.btnConfigVar.Name = "btnConfigVar";
+            this.btnConfigVar.Size = new System.Drawing.Size(40, 40);
+            this.btnConfigVar.TabIndex = 4;
+            this.btnConfigVar.UseVisualStyleBackColor = true;
+            this.btnConfigVar.Click += new System.EventHandler(this.btnConfigVar_Click);
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(89, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(631, 40);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Inicio";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // pictureBox1
             // 
@@ -105,24 +137,43 @@
             this.btnCerrarPrograma.UseVisualStyleBackColor = true;
             this.btnCerrarPrograma.Click += new System.EventHandler(this.btnCerrarPrograma_Click);
             // 
-            // panel1
+            // panelInicio
             // 
-            this.panel1.Controls.Add(this.btnConfig);
-            this.panel1.Controls.Add(this.ControlConfiguracion);
-            this.panel1.Controls.Add(this.ellipseControls6);
-            this.panel1.Controls.Add(this.ellipseControls7);
-            this.panel1.Controls.Add(this.ellipseControls8);
-            this.panel1.Controls.Add(this.ellipseControls3);
-            this.panel1.Controls.Add(this.ellipseControls4);
-            this.panel1.Controls.Add(this.ellipseControls2);
-            this.panel1.Controls.Add(this.ellipseControls1);
-            this.panel1.Controls.Add(this.PanelOpciones);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(30);
-            this.panel1.Size = new System.Drawing.Size(800, 443);
-            this.panel1.TabIndex = 2;
+            this.panelInicio.Controls.Add(this.btnConfig);
+            this.panelInicio.Controls.Add(this.ControlConfiguracion);
+            this.panelInicio.Controls.Add(this.ellipseControls6);
+            this.panelInicio.Controls.Add(this.ellipseControls7);
+            this.panelInicio.Controls.Add(this.ellipseControls8);
+            this.panelInicio.Controls.Add(this.ellipseControls3);
+            this.panelInicio.Controls.Add(this.ellipseControls4);
+            this.panelInicio.Controls.Add(this.ellipseControls2);
+            this.panelInicio.Controls.Add(this.ellipseControls1);
+            this.panelInicio.Controls.Add(this.PanelOpciones);
+            this.panelInicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelInicio.Location = new System.Drawing.Point(0, 40);
+            this.panelInicio.Name = "panelInicio";
+            this.panelInicio.Padding = new System.Windows.Forms.Padding(30);
+            this.panelInicio.Size = new System.Drawing.Size(800, 443);
+            this.panelInicio.TabIndex = 2;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnConfig.BorderColor1 = System.Drawing.Color.PaleVioletRed;
+            this.btnConfig.BorderRadius1 = 10;
+            this.btnConfig.BorderSize1 = 0;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.Image = global::HMI_V2.Properties.Resources.ajustes_de_engranajes__2_;
+            this.btnConfig.Location = new System.Drawing.Point(577, 228);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(150, 150);
+            this.btnConfig.TabIndex = 12;
+            this.btnConfig.TextColor = System.Drawing.Color.White;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // ControlConfiguracion
             // 
@@ -221,43 +272,12 @@
             this.ellipseComponents1.CornerRadius = 60;
             this.ellipseComponents1.TargetControl = this;
             // 
-            // btnConfig
-            // 
-            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfig.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnConfig.BorderColor1 = System.Drawing.Color.PaleVioletRed;
-            this.btnConfig.BorderRadius1 = 10;
-            this.btnConfig.BorderSize1 = 0;
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.ForeColor = System.Drawing.Color.White;
-            this.btnConfig.Image = global::HMI_V2.Properties.Resources.ajustes_de_engranajes__2_;
-            this.btnConfig.Location = new System.Drawing.Point(577, 228);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(150, 150);
-            this.btnConfig.TabIndex = 12;
-            this.btnConfig.TextColor = System.Drawing.Color.White;
-            this.btnConfig.UseVisualStyleBackColor = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(631, 40);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Inicio";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 483);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelInicio);
             this.Controls.Add(this.BarraHerramientas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -267,7 +287,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.BarraHerramientas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panelInicio.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,7 +300,7 @@
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Controles.EllipseControls PanelOpciones;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelInicio;
         private Controles.EllipseControls ControlConfiguracion;
         private Controles.EllipseControls ellipseControls7;
         private Controles.EllipseControls ellipseControls8;
@@ -291,6 +311,11 @@
         private Controles.EllipseControls ellipseControls6;
         private Controles.EllipseButton btnConfig;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnConfigVar;
+        internal System.IO.Ports.SerialPort serialPort1;
+        internal System.IO.Ports.SerialPort serialPort2;
+        internal System.IO.Ports.SerialPort serialPort3;
+        internal System.IO.Ports.SerialPort serialPort4;
     }
 }
 

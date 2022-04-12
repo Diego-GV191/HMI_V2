@@ -51,6 +51,7 @@
     <Compile Include="Componentes\EllipseComponents.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controles\Controls.cs" />
     <Compile Include="Controles\EllipseButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -100,9 +101,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ajustes-de-engranajes %281%29.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ajustes-de-engranajes %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes-de-engranajes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

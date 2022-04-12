@@ -20,7 +20,7 @@ namespace HMI_V2
             InitializeComponent();
             Buttons.NavVarDesignButton(ref btnCerrarPrograma, "Right");
             Buttons.NavVarDesignButton(ref btnMinimizar, "Right");
-            //Buttons.FormDesingButton(ref btnPicConfig);
+            Buttons.NavVarDesignButton(ref btnConfigVar, "Right", false);
         }
 
         // Drag form
@@ -51,7 +51,7 @@ namespace HMI_V2
 
             if (existe != null)
             {
-                MessageBox.Show(NameForm + " esta abierto");
+                MessageBox.Show(existe.Text + " esta abierto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
             else
@@ -94,6 +94,16 @@ namespace HMI_V2
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
+        {
+            OpenConfig();
+        }
+
+        private void btnConfigVar_Click(object sender, EventArgs e)
+        {
+            OpenConfig();
+        }
+
+        private void OpenConfig()
         {
             if (!FormIsOpen("Config"))
             {

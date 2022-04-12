@@ -63,6 +63,26 @@ namespace HMI_V2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ajustes_de_engranajes {
+            get {
+                object obj = ResourceManager.GetObject("ajustes-de-engranajes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ajustes_de_engranajes__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ajustes-de-engranajes (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ajustes_de_engranajes__2_ {
             get {
                 object obj = ResourceManager.GetObject("ajustes-de-engranajes (2)", resourceCulture);

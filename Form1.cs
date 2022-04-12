@@ -41,21 +41,36 @@ namespace HMI_V2
 
         private void MoverVentana()
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            try
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
         }
 
         private bool FormIsOpen(String NameForm)
         {
-            Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == NameForm).SingleOrDefault<Form>();
-
-            if (existe != null)
+            try
             {
-                MessageBox.Show(existe.Text + " esta abierto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return true;
+                Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == NameForm).SingleOrDefault<Form>();
+                if (existe != null)
+                {
+                    MessageBox.Show(existe.Text + " esta abierto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -82,14 +97,21 @@ namespace HMI_V2
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized | this.WindowState == FormWindowState.Normal)
+            try
             {
-                this.WindowState = FormWindowState.Minimized;
-                ShowInTaskbar = true;
+                if (this.WindowState == FormWindowState.Maximized | this.WindowState == FormWindowState.Normal)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    ShowInTaskbar = true;
+                }
+                else
+                {
+                    this.WindowState = FormWindowState.Maximized;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.WindowState = FormWindowState.Maximized;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -105,10 +127,17 @@ namespace HMI_V2
 
         private void OpenConfig()
         {
-            if (!FormIsOpen("Config"))
+            try
             {
-                Config Fconfig = new Config();
-                Fconfig.Show();
+                if (!FormIsOpen("Config"))
+                {
+                    Config Fconfig = new Config();
+                    Fconfig.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

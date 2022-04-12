@@ -40,20 +40,20 @@
             this.PortSerial2 = new System.Windows.Forms.ComboBox();
             this.PortSerial1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Conect4 = new HMI_V2.Controles.EllipseButton();
             this.BaudRate4 = new System.Windows.Forms.ComboBox();
-            this.ellipseControls4 = new HMI_V2.Controles.EllipseControls();
             this.label5 = new System.Windows.Forms.Label();
-            this.Conect3 = new HMI_V2.Controles.EllipseButton();
             this.BaudRate3 = new System.Windows.Forms.ComboBox();
-            this.ellipseControls5 = new HMI_V2.Controles.EllipseControls();
             this.label1 = new System.Windows.Forms.Label();
-            this.Conect2 = new HMI_V2.Controles.EllipseButton();
             this.BaudRate2 = new System.Windows.Forms.ComboBox();
-            this.ellipseControls3 = new HMI_V2.Controles.EllipseControls();
             this.label3 = new System.Windows.Forms.Label();
-            this.Conect1 = new HMI_V2.Controles.EllipseButton();
             this.BaudRate1 = new System.Windows.Forms.ComboBox();
+            this.Conect4 = new HMI_V2.Controles.EllipseButton();
+            this.ellipseControls4 = new HMI_V2.Controles.EllipseControls();
+            this.Conect3 = new HMI_V2.Controles.EllipseButton();
+            this.ellipseControls5 = new HMI_V2.Controles.EllipseControls();
+            this.Conect2 = new HMI_V2.Controles.EllipseButton();
+            this.ellipseControls3 = new HMI_V2.Controles.EllipseControls();
+            this.Conect1 = new HMI_V2.Controles.EllipseButton();
             this.ellipseControls1 = new HMI_V2.Controles.EllipseControls();
             this.ellipseControls2 = new HMI_V2.Controles.EllipseControls();
             this.ellipseComponents1 = new HMI_V2.Componentes.EllipseComponents();
@@ -217,6 +217,123 @@
             this.label4.Text = "Serial Port 4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BaudRate4
+            // 
+            this.BaudRate4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BaudRate4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BaudRate4.FormattingEnabled = true;
+            this.BaudRate4.Items.AddRange(new object[] {
+            "1200",
+            "2400",
+            "4800",
+            "9600",
+            "19200",
+            "28800",
+            "57600",
+            "115200"});
+            this.BaudRate4.Location = new System.Drawing.Point(682, 158);
+            this.BaudRate4.Margin = new System.Windows.Forms.Padding(20);
+            this.BaudRate4.Name = "BaudRate4";
+            this.BaudRate4.Size = new System.Drawing.Size(139, 33);
+            this.BaudRate4.TabIndex = 24;
+            this.BaudRate4.Text = "115200";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(479, 74);
+            this.label5.Margin = new System.Windows.Forms.Padding(20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 36);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Serial Port 3";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BaudRate3
+            // 
+            this.BaudRate3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BaudRate3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BaudRate3.FormattingEnabled = true;
+            this.BaudRate3.Items.AddRange(new object[] {
+            "1200",
+            "2400",
+            "4800",
+            "9600",
+            "19200",
+            "28800",
+            "57600",
+            "115200"});
+            this.BaudRate3.Location = new System.Drawing.Point(479, 158);
+            this.BaudRate3.Margin = new System.Windows.Forms.Padding(20);
+            this.BaudRate3.Name = "BaudRate3";
+            this.BaudRate3.Size = new System.Drawing.Size(139, 33);
+            this.BaudRate3.TabIndex = 20;
+            this.BaudRate3.Text = "115200";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(276, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 36);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Serial Port 2";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BaudRate2
+            // 
+            this.BaudRate2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BaudRate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BaudRate2.FormattingEnabled = true;
+            this.BaudRate2.Items.AddRange(new object[] {
+            "1200",
+            "2400",
+            "4800",
+            "9600",
+            "19200",
+            "28800",
+            "57600",
+            "115200"});
+            this.BaudRate2.Location = new System.Drawing.Point(276, 158);
+            this.BaudRate2.Margin = new System.Windows.Forms.Padding(20);
+            this.BaudRate2.Name = "BaudRate2";
+            this.BaudRate2.Size = new System.Drawing.Size(139, 33);
+            this.BaudRate2.TabIndex = 16;
+            this.BaudRate2.Text = "115200";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(73, 74);
+            this.label3.Margin = new System.Windows.Forms.Padding(20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 36);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Serial Port 1";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BaudRate1
+            // 
+            this.BaudRate1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BaudRate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BaudRate1.FormattingEnabled = true;
+            this.BaudRate1.Items.AddRange(new object[] {
+            "1200",
+            "2400",
+            "4800",
+            "9600",
+            "19200",
+            "28800",
+            "57600",
+            "115200"});
+            this.BaudRate1.Location = new System.Drawing.Point(73, 158);
+            this.BaudRate1.Margin = new System.Windows.Forms.Padding(20);
+            this.BaudRate1.Name = "BaudRate1";
+            this.BaudRate1.Size = new System.Drawing.Size(139, 33);
+            this.BaudRate1.TabIndex = 12;
+            this.BaudRate1.Text = "115200";
+            // 
             // Conect4
             // 
             this.Conect4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -239,27 +356,6 @@
             this.Conect4.UseVisualStyleBackColor = false;
             this.Conect4.Click += new System.EventHandler(this.Conect4_Click);
             // 
-            // BaudRate4
-            // 
-            this.BaudRate4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BaudRate4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaudRate4.FormattingEnabled = true;
-            this.BaudRate4.Items.AddRange(new object[] {
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "19200",
-            "28800",
-            "57600",
-            "115200"});
-            this.BaudRate4.Location = new System.Drawing.Point(682, 158);
-            this.BaudRate4.Margin = new System.Windows.Forms.Padding(20);
-            this.BaudRate4.Name = "BaudRate4";
-            this.BaudRate4.Size = new System.Drawing.Size(139, 33);
-            this.BaudRate4.TabIndex = 24;
-            this.BaudRate4.Text = "115200";
-            // 
             // ellipseControls4
             // 
             this.ellipseControls4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -272,17 +368,6 @@
             this.ellipseControls4.Size = new System.Drawing.Size(173, 217);
             this.ellipseControls4.TabIndex = 23;
             this.ellipseControls4.Text = "ellipseControls4";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(479, 74);
-            this.label5.Margin = new System.Windows.Forms.Padding(20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 36);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Serial Port 3";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Conect3
             // 
@@ -306,27 +391,6 @@
             this.Conect3.UseVisualStyleBackColor = false;
             this.Conect3.Click += new System.EventHandler(this.Conect3_Click);
             // 
-            // BaudRate3
-            // 
-            this.BaudRate3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BaudRate3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaudRate3.FormattingEnabled = true;
-            this.BaudRate3.Items.AddRange(new object[] {
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "19200",
-            "28800",
-            "57600",
-            "115200"});
-            this.BaudRate3.Location = new System.Drawing.Point(479, 158);
-            this.BaudRate3.Margin = new System.Windows.Forms.Padding(20);
-            this.BaudRate3.Name = "BaudRate3";
-            this.BaudRate3.Size = new System.Drawing.Size(139, 33);
-            this.BaudRate3.TabIndex = 20;
-            this.BaudRate3.Text = "115200";
-            // 
             // ellipseControls5
             // 
             this.ellipseControls5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -339,17 +403,6 @@
             this.ellipseControls5.Size = new System.Drawing.Size(173, 217);
             this.ellipseControls5.TabIndex = 19;
             this.ellipseControls5.Text = "ellipseControls5";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(276, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 36);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Serial Port 2";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Conect2
             // 
@@ -373,27 +426,6 @@
             this.Conect2.UseVisualStyleBackColor = false;
             this.Conect2.Click += new System.EventHandler(this.Conect2_Click);
             // 
-            // BaudRate2
-            // 
-            this.BaudRate2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BaudRate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaudRate2.FormattingEnabled = true;
-            this.BaudRate2.Items.AddRange(new object[] {
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "19200",
-            "28800",
-            "57600",
-            "115200"});
-            this.BaudRate2.Location = new System.Drawing.Point(276, 158);
-            this.BaudRate2.Margin = new System.Windows.Forms.Padding(20);
-            this.BaudRate2.Name = "BaudRate2";
-            this.BaudRate2.Size = new System.Drawing.Size(139, 33);
-            this.BaudRate2.TabIndex = 16;
-            this.BaudRate2.Text = "115200";
-            // 
             // ellipseControls3
             // 
             this.ellipseControls3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -406,17 +438,6 @@
             this.ellipseControls3.Size = new System.Drawing.Size(173, 217);
             this.ellipseControls3.TabIndex = 15;
             this.ellipseControls3.Text = "ellipseControls3";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(73, 74);
-            this.label3.Margin = new System.Windows.Forms.Padding(20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 36);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Serial Port 1";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Conect1
             // 
@@ -439,27 +460,6 @@
             this.Conect1.TextColor = System.Drawing.Color.Black;
             this.Conect1.UseVisualStyleBackColor = false;
             this.Conect1.Click += new System.EventHandler(this.Conect1_Click);
-            // 
-            // BaudRate1
-            // 
-            this.BaudRate1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BaudRate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaudRate1.FormattingEnabled = true;
-            this.BaudRate1.Items.AddRange(new object[] {
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "19200",
-            "28800",
-            "57600",
-            "115200"});
-            this.BaudRate1.Location = new System.Drawing.Point(73, 158);
-            this.BaudRate1.Margin = new System.Windows.Forms.Padding(20);
-            this.BaudRate1.Name = "BaudRate1";
-            this.BaudRate1.Size = new System.Drawing.Size(139, 33);
-            this.BaudRate1.TabIndex = 12;
-            this.BaudRate1.Text = "115200";
             // 
             // ellipseControls1
             // 
@@ -502,6 +502,7 @@
             this.Name = "Config";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración";
+            this.Load += new System.EventHandler(this.Config_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Config_MouseDown);
             this.BarraHerramientas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

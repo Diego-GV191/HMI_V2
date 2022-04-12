@@ -40,8 +40,15 @@ namespace HMI_V2.Formularios
 
         private void MoverVentana()
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            try
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Config_MouseDown(object sender, MouseEventArgs e)
@@ -56,19 +63,33 @@ namespace HMI_V2.Formularios
 
         private void btnCerrarPrograma_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized | this.WindowState == FormWindowState.Normal)
+            try
             {
-                this.WindowState = FormWindowState.Minimized;
-                ShowInTaskbar = true;
+                if (this.WindowState == FormWindowState.Maximized | this.WindowState == FormWindowState.Normal)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    ShowInTaskbar = true;
+                }
+                else
+                {
+                    this.WindowState = FormWindowState.Maximized;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.WindowState = FormWindowState.Maximized;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -414,6 +435,11 @@ namespace HMI_V2.Formularios
                     MessageBox.Show(error.Message);
                 }
             }
+        }
+
+        private void Config_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("No usar el mismo puerto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

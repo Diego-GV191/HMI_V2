@@ -14,7 +14,6 @@ namespace HMI_V2.Componentes
         {
             btn.BackColor = Color.FromArgb(150, 150, 255);
             btn.FlatAppearance.BorderSize = 0;
-            btn.Enabled = true;
             btn.FlatStyle = FlatStyle.Flat;
 
             if (Lado.Equals("Left")) btn.Dock = DockStyle.Left;
@@ -25,7 +24,6 @@ namespace HMI_V2.Componentes
         {
             //btn.FlatAppearance.BorderSize = 0;
             //btn.FlatStyle = FlatStyle.Flat;
-            btn.Enabled = true;
         }
     }
 }
